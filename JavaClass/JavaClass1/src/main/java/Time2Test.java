@@ -23,5 +23,6 @@ public class Time2Test {
     }
     private static void displayTime(String hdr, Time2 t) {
         System.out.printf("%s%n %s%n %s%n", hdr, t.toUniversalString(), t);
+        System.out.println("in display time method");
     }
 }
