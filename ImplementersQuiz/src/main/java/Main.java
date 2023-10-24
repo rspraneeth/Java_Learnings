@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        boolean repeat;
+        String repeat;
         QuizService service = new QuizService();
         QList qList = new QList();
         do {
@@ -21,8 +21,8 @@ public class Main {
                 System.out.println("Your score is: "+service.getScore());
             }
 
-            System.out.println("Would you like to repeat? true or false?");
-            repeat = in.nextBoolean();
-        } while (repeat);
+            System.out.println("Would you like to repeat? y/n?");
+            repeat = in.next();
+        } while (repeat.equalsIgnoreCase("y"));
     }
 }
