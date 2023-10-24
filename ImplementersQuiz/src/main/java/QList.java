@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class QList {
     static List<Question> questionsList = new ArrayList<>();
@@ -19,15 +16,18 @@ public class QList {
     public static List<Question> getQuestions(int count) {
         int n = questionsList.size();
         List<Question> qs = new ArrayList<>();
+        HashSet<Integer> set = new HashSet<>(count);
+        Random random = new Random();
 
-        int[] rand = new int[count];
-        for (int i=0; i < count; i++) { // picking random numbers, have to write code yet
-            rand[i] = new Random().nextInt(1, n+1);
+        while (set.size() < count){
+            int number = random.nextInt(0, n);
+            set.add(number);
         }
 
+        Integer[] setAr = set.toArray(new Integer[0]);
 
         for (int i=0; i < count; i++) {
-            qs.add(questionsList.get(rand[i]-1));
+            qs.add(questionsList.get(setAr[i]));
         }
 
         return qs;
@@ -37,12 +37,15 @@ public class QList {
         System.out.println("How many questions would you like to add?");
         numQ = questionsList.size();
         int cou = in.nextInt();
+        in.nextLine();
         for (int i = 0; i < cou; i++){
             Question q = new Question();
-            System.out.println("Question id is " + (++numQ));
-            q.setQid(numQ);
+            numQ++;
+            System.out.println("Question id is " + (questionsList.size()+1));
+            q.setQid(questionsList.size()+1);
             System.out.println("Question title? :");
-            q.setTitle(in.nextLine());
+            String title = in.nextLine();
+            q.setTitle(title);
             System.out.println("Enter 4 options: ");
             q.setOption1(in.nextLine());
             q.setOption2(in.nextLine());
@@ -53,12 +56,6 @@ public class QList {
             questionsList.add(q);
             System.out.println(q);
             System.out.println("Question added!");
-        }
-    }
-
-    public void displayAllQuestions(){
-        for (Question q: questionsList) {
-            System.out.println(q);
         }
     }
 

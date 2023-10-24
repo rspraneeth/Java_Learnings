@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Question {
     private int qid;
     private String title;
@@ -8,7 +6,6 @@ public class Question {
     private String option3;
     private String option4;
     private String answer;
-    Scanner in = new Scanner(System.in);
 
     public Question(int qid, String title, String option1, String option2, String option3, String option4, String answer) {
         this.qid = qid;
@@ -20,13 +17,7 @@ public class Question {
         this.answer = answer;
     }
 
-
-
     public Question() { }
-
-    public int getQid() {
-        return qid;
-    }
 
     public void setQid(int qid) {
         this.qid = qid;
