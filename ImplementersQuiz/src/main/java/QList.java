@@ -21,9 +21,10 @@ public class QList {
         List<Question> qs = new ArrayList<>();
 
         int[] rand = new int[count];
-        for (int i=0; i < count; i++) { // picking random numbers
+        for (int i=0; i < count; i++) { // picking random numbers, have to write code yet
             rand[i] = new Random().nextInt(1, n+1);
         }
+
 
         for (int i=0; i < count; i++) {
             qs.add(questionsList.get(rand[i]-1));
@@ -32,25 +33,27 @@ public class QList {
         return qs;
     }
 
-    public void addQuestion(Question q){
-        numQ++;
-        System.out.println("Question id is " +(questionsList.size()+1));
-        q.setQid(questionsList.size()+1);
-        System.out.println("Question title? :");
-        q.setTitle(in.nextLine());
-        System.out.println("Enter option 1: ");
-        q.setOption1(in.nextLine());
-        System.out.println("Enter option 2: ");
-        q.setOption2(in.nextLine());
-        System.out.println("Enter option 3: ");
-        q.setOption3(in.nextLine());
-        System.out.println("Enter option 4: ");
-        q.setOption4(in.nextLine());
-        System.out.println("Enter answer: ");
-        q.setAnswer(in.nextLine());
-        questionsList.add(q);
-        System.out.println(q);
-        System.out.println("Question added!");
+    public void addQuestion(){
+        System.out.println("How many questions would you like to add?");
+        numQ = questionsList.size();
+        int cou = in.nextInt();
+        for (int i = 0; i < cou; i++){
+            Question q = new Question();
+            System.out.println("Question id is " + (++numQ));
+            q.setQid(numQ);
+            System.out.println("Question title? :");
+            q.setTitle(in.nextLine());
+            System.out.println("Enter 4 options: ");
+            q.setOption1(in.nextLine());
+            q.setOption2(in.nextLine());
+            q.setOption3(in.nextLine());
+            q.setOption4(in.nextLine());
+            System.out.println("Enter answer: ");
+            q.setAnswer(in.nextLine());
+            questionsList.add(q);
+            System.out.println(q);
+            System.out.println("Question added!");
+        }
     }
 
     public void displayAllQuestions(){

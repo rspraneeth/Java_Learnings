@@ -11,6 +11,7 @@ public class QuizService {
         for (Question q: questions) {
             System.out.println(q.getTitle()+"\n"+q.getOption1()+" "+q.getOption2()+" "+q.getOption3()+" "+q.getOption4()+"\nYour answer: ");
             String ans = in.nextLine();
+
             if (ans.equals(q.getAnswer())) score++;
             else score--;
         }
