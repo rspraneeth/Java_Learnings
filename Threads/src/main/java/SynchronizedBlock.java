@@ -1,9 +1,9 @@
-public class ConcurrencySynchronized {
+public class SynchronizedBlock {
     public static void main(String[] args) {
-        Abc abc = new Abc();
-        Thread t1 = new Thread(abc);
-        Thread t2 = new Thread(abc);
-        Thread t3 = new Thread(abc);
+        Abcd abcd = new Abcd();
+        Thread t1 = new Thread(abcd);
+        Thread t2 = new Thread(abcd);
+        Thread t3 = new Thread(abcd);
         t1.setName("Thread1");
         t2.setName("Thread2");
         t3.setName("Thread3");
@@ -13,8 +13,8 @@ public class ConcurrencySynchronized {
     }
 }
 
-class Abc implements Runnable{
-    synchronized public void run() {
+class Abcd implements Runnable{
+    public void run() {
         try {
             System.out.println(Thread.currentThread().getName() + "Entered");
             Thread.sleep(3000);
