@@ -33,7 +33,7 @@ class Alpha implements Comparator<Employee>{
     }
 
 }
-public class LaunchSorting {
+public class LaunchSortingComparator {
     public static void main(String[] args) {
         Employee emp1 = new Employee(1, "RSP", 26);
         System.out.println(emp1);
