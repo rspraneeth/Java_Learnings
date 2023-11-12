@@ -22,6 +22,11 @@ public class OptionalDemo {
 
         System.out.println(name1.orElse("Not found"));
 
+
+        System.out.println(names.stream()
+                .filter(n->n.contains("z"))
+                .findFirst()
+                .orElse("Not found"));
 //        to get rid of null pointer exception, optional class is introduced.
     }
 }
