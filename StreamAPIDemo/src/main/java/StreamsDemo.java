@@ -45,14 +45,15 @@ public class StreamsDemo {
 
         System.out.println("*********************************************************");
 
-        System.out.println("Here, filter and map are Intermediate operations(Lazy), reduce is Terminal operation(Eager)");
+        System.out.println("Here, filter and map are Intermediate operations(Lazy), reduce is Terminal operation(Eager).");
 
-        System.out.println("Intermediate operations return a new stream. They are always lazy; \n" +
-                "executing an intermediate operation such as filter() does not actually perform \n" +
-                "any filtering, but instead creates a new stream that, when traversed, \n" +
-                "contains the elements of the initial stream that match the given predicate. \n" +
-                "Traversal of the pipeline source does not begin until the terminal operation \n" +
-                "of the pipeline is executed");
+        System.out.println("""
+                Intermediate operations return a new stream. They are always lazy;
+                executing an intermediate operation such as filter() does not actually perform
+                any filtering, but instead creates a new stream that, when traversed,
+                contains the elements of the initial stream that match the given predicate.
+                Traversal of the pipeline source does not begin until the terminal operation
+                of the pipeline is executed""");
         nums.stream()
                 .filter(predicate)
                 .map(function);
