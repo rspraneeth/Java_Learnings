@@ -23,5 +23,6 @@ public class MethodRefDemo {
                 .toList();
 
         System.out.println(unames);
+
     }
 }
