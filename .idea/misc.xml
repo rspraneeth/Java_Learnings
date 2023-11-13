@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/JavaClass/Servlets" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -12,6 +15,13 @@
         <option value="$PROJECT_DIR$/JavaClass/Ch14StringRegEx/pom.xml" />
         <option value="$PROJECT_DIR$/JavaClass/Ch15FileIO/pom.xml" />
         <option value="$PROJECT_DIR$/Interf/pom.xml" />
+        <option value="$PROJECT_DIR$/LooseCoupling/pom.xml" />
+        <option value="$PROJECT_DIR$/CourseProject/pom.xml" />
+        <option value="$PROJECT_DIR$/Arrays/pom.xml" />
+        <option value="$PROJECT_DIR$/Threads/pom.xml" />
+        <option value="$PROJECT_DIR$/Collection/pom.xml" />
+        <option value="$PROJECT_DIR$/JavaClass/Servlets/pom.xml" />
+        <option value="$PROJECT_DIR$/StreamAPIDemo/pom.xml" />
       </list>
     </option>
   </component>

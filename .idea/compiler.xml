@@ -7,14 +7,25 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="JavaCh10" />
+        <module name="LooseCoupling" />
         <module name="Ch11" />
+        <module name="StreamAPIDemo" />
+        <module name="Threads" />
+        <module name="CourseProject" />
         <module name="JavaClassCh9" />
         <module name="Ch14StringRegEx" />
+        <module name="Collection" />
         <module name="Ch15FileIO" />
         <module name="Interf" />
+        <module name="Arrays" />
         <module name="Patterns" />
+        <module name="Servlets" />
         <module name="JavaClass1" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="StramAPIDemo" target="20" />
+      <module name="StreamAPI" target="20" />
+    </bytecodeTargetLevel>
   </component>
 </project>

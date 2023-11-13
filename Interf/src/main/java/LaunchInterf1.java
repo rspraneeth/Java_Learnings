@@ -10,11 +10,16 @@ interface Calculator2{
     void disp();
 }
 
-class MyCalc1 implements Calculator1, Calculator2{
+interface Many{
+    float pi = 3.145f; //public static final float pi = 3.145f
+}
+
+class MyCalc1 implements Calculator1, Calculator2, Many{
 
 
     public void add(int num1, int num2) {
         System.out.println("addition");
+        System.out.println(pi);
     }
 
 
