@@ -5,7 +5,7 @@ interface IGen<T>{
 
 class Human{
     public void sleep(){
-        System.out.println("Humans nee to sleep");
+        System.out.println("Humans needs to sleep");
     }
 }
 class Genr<T> implements IGen<String>{
