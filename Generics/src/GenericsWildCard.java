@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 class Human1{
@@ -52,5 +53,20 @@ public class GenericsWildCard {
         humanList2 = humans2;
         humanList2 = objs1;
 //        humanList2 = manList2; // since manList2 is of Human type, it is not possible to assign it to humanList2, we can only assign super type of Human
+
+        humans2.add(new Human1());
+        humans2.add(new Human1());
+        invokeEat(humans2);
+
+        manList2.add(new Man());
+        manList2.add(new Man());
+        invokeEat(manList2);
+
+    }
+
+    public static void invokeEat(List<? extends Human1> list){
+        for(Human1 h : list){
+            h.eat();
+        }
     }
 }
