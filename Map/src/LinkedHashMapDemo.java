@@ -19,14 +19,14 @@ public class LinkedHashMapDemo { // child of hash map
         tm.put(1, "Kohli");
         tm.put(2, "KL");
 //        tm.put(null, null); null pointer exception
-        System.out.println(tm);
+        System.out.println(tm); //sorted ascending order
 
         Hashtable htb = new Hashtable();
         htb.put(4, "Shami");
         htb.put(1, "Kohli");
         htb.put(2, "KL");
 //        htb.put(null, null); null pointer exception
-        System.out.println(htb);
+        System.out.println(htb); //sorted descending order
     }
 
 
