@@ -17,6 +17,10 @@ class Learner1 {
                 '}';
     }
 
+    @Override
+    public void finalize(){ // used to clean heap area, or gc collector
+        System.out.println("cleaned");
+    }
 }
 public class HashMapDemo1 {
     public static void main(String[] args) {
@@ -24,6 +28,9 @@ public class HashMapDemo1 {
         HashMap map = new HashMap();
         map.put(learner1, "Java");
         System.out.println(map);
+        learner1 = null;
+        System.gc();
+        System.out.println(map); //gc doesnt clean, because hashmap dominates gc
 
     }
 }
