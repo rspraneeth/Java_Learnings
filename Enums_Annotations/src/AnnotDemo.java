@@ -14,6 +14,7 @@ class Aeroplane{
     }
 }
 
+
 class FighterPlane extends Aeroplane{
     //Overriding method to see different behaviour at run time
     @Override // using this annotation to check if the method is overridden or not for compiler

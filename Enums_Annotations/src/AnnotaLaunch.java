@@ -41,5 +41,6 @@ public class AnnotaLaunch {
         TeamName tn = (TeamName) an;
         int age = tn.age();
         System.out.println(age+" "+tn.country());
+
     }
 }
