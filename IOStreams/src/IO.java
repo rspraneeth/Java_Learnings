@@ -11,6 +11,14 @@ class Employee{
         this.age = age;
     }
 
+    public void display(){
+        System.out.println("Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                '}');
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -33,6 +41,7 @@ public class IO {
         String path2 = "C:\\Users\\Praneeth\\IdeaProjects\\JavaBasics\\IOStreams\\123";
         String path3 = "C:\\Users\\Praneeth\\IdeaProjects\\JavaBasics\\IOStreams";
         FileWriter fileWriter = null;
+        BufferedWriter bw = null;
         try {
             File file = new File(path);
 //            System.out.println(file.createNewFile());// if file is present it refers automatically. if not it creates
@@ -55,15 +64,23 @@ public class IO {
             System.out.println(numFiles);
 
             fileWriter = new FileWriter(file);
-            fileWriter.write(e1.toString());
-            fileWriter.write("\n");
-            fileWriter.write(e2.toString());
+//            fileWriter.write(e1.toString());
+//            fileWriter.write("\n");
+//            fileWriter.write(e2.toString());
+
+            bw = new BufferedWriter(fileWriter);
+            bw.write(e1.toString());
+            bw.newLine();
+            bw.write(e2.toString());
+            bw.flush();
 
         } catch (Exception e) {
             System.out.println("Some exception" + e.getMessage());
         } finally {
             assert fileWriter != null;
             fileWriter.close();
+            assert bw != null;
+            bw.close();
         }
 
 
