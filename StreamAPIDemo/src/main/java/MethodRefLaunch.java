@@ -38,6 +38,5 @@ public class MethodRefLaunch {
                 .map(Student::getName)
                 .map(String::toUpperCase)
                 .forEach(System.out::println);
-
     }
 }

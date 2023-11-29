@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/DateTime/DateTime.iml" filepath="$PROJECT_DIR$/DateTime/DateTime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Enums_Annotations/Enums_Annotations.iml" filepath="$PROJECT_DIR$/Enums_Annotations/Enums_Annotations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Generics/Generics.iml" filepath="$PROJECT_DIR$/Generics/Generics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IOStreams/IOStreams.iml" filepath="$PROJECT_DIR$/IOStreams/IOStreams.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JDBC1/JDBC1.iml" filepath="$PROJECT_DIR$/JDBC1/JDBC1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JDBC2Test/JDBC2Test.iml" filepath="$PROJECT_DIR$/JDBC2Test/JDBC2Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JavaBasics.iml" filepath="$PROJECT_DIR$/.idea/JavaBasics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Map/Map.iml" filepath="$PROJECT_DIR$/Map/Map.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RewardsApp/RewardsApp.iml" filepath="$PROJECT_DIR$/RewardsApp/RewardsApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WrapperClass/WrapperClass.iml" filepath="$PROJECT_DIR$/WrapperClass/WrapperClass.iml" />
     </modules>
   </component>
 </project>
