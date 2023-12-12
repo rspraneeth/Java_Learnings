@@ -25,10 +25,12 @@ public class Launch1 {
         //create persistence object
         Student student = new Student(2, "RSP", "USA");
 
-        //perform persistence operation
-        //session.save(student);
-        //session.update(student);
-        session.saveOrUpdate(student);
+//        perform persistence operation
+//        session.save(student);
+//        session.update(student);
+//        session.saveOrUpdate(student);
+        session.delete(student);
+
         //commit the operation
         transaction.commit();
 
