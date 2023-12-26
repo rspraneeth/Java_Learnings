@@ -15,8 +15,8 @@ public class LaunchApp {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         Implementers implementers = new Implementers();
-        implementers.setId(1);
-        implementers.setName("RSP");
+        implementers.setId(2);
+        implementers.setName("RSPraneeth");
         implementers.setDate(new Date());
         implementers.setTime(new Date());;
         implementers.setDateTime(new Date());
